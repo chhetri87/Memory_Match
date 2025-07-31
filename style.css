@@ -1,0 +1,386 @@
+:root {
+    --primary: #3a6ff7;
+    --primary-dark: #2b4da1;
+    --accent: #5edfff;
+    --bg: #f4f7fa;
+    --white: #fff;
+    --shadow: 0 4px 32px rgba(58,111,247,0.09);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: #222;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #3a6ff7 60%, #5edfff 100%);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3vw 1.2rem 2vw;
+    box-shadow: var(--shadow);
+}
+.nav-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-left: 0.7rem;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #ffe082;
+}
+.fb-btn {
+    background: #4267B2;
+    border: none;
+    color: #fff;
+    padding: 0.55rem 1.7rem;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(66,103,178,0.10);
+    margin-left: 1.5rem;
+}
+.fb-btn i {
+    font-size: 1.1rem;
+}
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #4e73df 60%, #5edfff 100%);
+    color: var(--white);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+    padding: 0;
+    border-radius: 0 0 18px 18px;
+}
+.hero-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 2rem;
+    min-height: 420px;
+}
+.hero-content {
+    flex: 1 1 52%;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: 1.33rem;
+    font-weight: 400;
+    margin-bottom: 2.2rem;
+    max-width: 520px;
+}
+.hero-actions {
+    display: flex;
+    gap: 1.2rem;
+}
+.hero-actions .btn {
+    background: var(--white);
+    color: var(--primary);
+    border: none;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.8rem 2.1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    box-shadow: 0 2px 8px rgba(58,111,247,0.13);
+    transition: background 0.2s, color 0.2s;
+}
+.hero-actions .btn.fb {
+    background: #4267B2;
+    color: #fff;
+}
+.hero-actions .btn:hover {
+    background: var(--accent);
+    color: #222;
+}
+.hero-graphic {
+    flex: 1 1 48%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 320px;
+    min-height: 320px;
+    margin-left: 0;
+}
+/* FEATURES */
+.features-section {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+}
+.features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.2rem;
+    color: var(--primary);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.feature-card {
+    background: #f4f7fa;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(58,111,247,0.06);
+    padding: 1.5rem 1.1rem;
+    text-align: center;
+}
+.feature-card i {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+.feature-card .feature-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+.feature-card .feature-desc {
+    color: #555;
+    font-size: 1rem;
+}
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 2.4rem 1rem 2.8rem 1rem;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+}
+.cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+.cta-actions .btn {
+    background: var(--white);
+    color: var(--primary);
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.7rem 1.7rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    box-shadow: 0 2px 8px rgba(58,111,247,0.13);
+    transition: background 0.2s, color 0.2s;
+}
+.cta-actions .btn.fb {
+    background: #4267B2;
+    color: #fff;
+}
+.cta-actions .btn:hover {
+    background: var(--accent);
+    color: #222;
+}
+/* FOOTER */
+footer {
+    background: #1d284d;
+    color: #cdd5e7;
+    padding: 1.6rem 0 0.7rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+@media (max-width: 1100px) {
+    .hero-inner {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 2rem 1rem 1.5rem 1rem;
+        min-height: unset;
+    }
+    .hero-graphic {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    .hero-content {
+        padding: 0 0 2rem 0;
+        align-items: flex-start;
+    }
+    .hero {
+        min-height: unset;
+        padding: 0;
+    }
+    .card-grid {
+        width: 220px;
+        height: 220px;
+        grid-template-columns: repeat(3, 48px);
+        grid-template-rows: repeat(3, 48px);
+        gap: 10px;
+        padding: 10px;
+    }
+    .card-grid .card {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+    }
+    .features-section, .cta-section {
+        max-width: 98vw;
+    }
+    .stats {
+        gap: 1.2rem;
+    }
+}
+@media (max-width: 700px) {
+    .hero {
+        min-height: unset;
+        padding: 0;
+    }
+    .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero-actions .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+    .nav-links {
+        gap: 1.1rem;
+    }
+}
+@media (max-width: 500px) {
+    .hero-inner {
+        padding: 0.7rem 0.2rem 1rem 0.2rem;
+    }
+    .hero-content h1 {
+        font-size: 1.2rem;
+    }
+    .card-grid {
+        width: 120px;
+        height: 120px;
+        grid-template-columns: repeat(3, 24px);
+        grid-template-rows: repeat(3, 24px);
+        gap: 6px;
+        padding: 4px;
+    }
+    .card-grid .card {
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 800px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stat-card {
+        min-width: 210px;
+        margin-bottom: 1rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+        padding: 1rem 1vw;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero {
+        padding: 2rem 0 1.5rem 0;
+    }
+    .hero-graphic {
+        margin-top: 1.2rem;
+    }
+    .features-section, .cta-section {
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 1.1rem;
+    }
+    .stat-card {
+        min-width: 120px;
+        padding: 0.7rem 0.7rem;
+    }
+}
